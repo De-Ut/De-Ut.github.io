@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+header{
+    color: #ffffff;
+    position: fixed;
+}
+.parallax { 
+    /* The image used */
+    background: #000000;
+
+    /* Set a specific height */
+    height: 620px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.parallax img{
+    height: 50%;
+}
+#works{
+    height: 620px;
+}
