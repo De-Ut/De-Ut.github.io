@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poiret+One');
 
 *{
-    font-family: "Poiret One";
     margin: 0;
     padding: 0;
 }
@@ -21,8 +20,10 @@ header{
     background-size: cover;
 }
 #works{
+    background: #ffffff;
 }
 h1{
+    font-family: "Poiret One";
     text-align: center;
     margin-bottom: 1em;
 }
