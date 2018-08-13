@@ -27,3 +27,24 @@ h1{
     text-align: center;
     margin-bottom: 1em;
 }
+
+.card{
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+.card-body{
+    position: absolute;
+    bottom: 0;
+    height: calc(100% - 1.4rem);
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.4);
+    transform: translateY(100%);
+    transition: transform 0.25s ease-in-out;
+}
+.card:hover>.card-body{
+    transform: translateY(0);
+}
+.card-header{
+    padding: 0.1rem 1rem;
+}
