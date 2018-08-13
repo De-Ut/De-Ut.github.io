@@ -7,9 +7,10 @@ html, body{
     height: 100%;
     width: 100%;
 }
-header{
+#header{
     color: #ffffff;
     position: fixed;
+    background: #000000;
 }
 .parallax { 
     /* The image used */
@@ -28,7 +29,7 @@ header{
     height: 50%;
 }
 #works{
-    height: 620px;
+    height: 1240px;
 }
 .nav-link{
      font-size: 18px;
@@ -37,20 +38,17 @@ header{
      -moz-transition:.5s;
      -webkit-transition:.5s;
      transition:.5s;
-     color: white;
+     color: #ffffff;
     }
 .nav-link:focus{
     border: none;
     outline: none;
 }
 .nav-link:hover{
-    color: white;
+   
     border-bottom: 5px solid white;
 }
 .logo{
     font-family: 'Poiret One';
     font-size: 34px;
-}
-.logo_row_bgc{
-    background-color: #000000;
 }

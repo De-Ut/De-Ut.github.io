@@ -14,13 +14,13 @@
         <title>Hello, world!</title>
     </head>
     <body>
-        <header class="container-fluid">
-            <div class="row logo_row_bgc">
-                <div class="logo col-lg-2 offset-lg-2">
+        <header class="container-fluid" id="header">
+            <div class="row">
+                <div class="logo col-lg-4 offset-lg-2">
                     <!--<img src="images/logo_white.png" height = "60px">-->
                     <span>1783 STUDIO</span>
                 </div>
-                <nav class="nav justify-content-end col-lg-6">
+                <nav class="nav justify-content-end col-lg-4">
                     <a class="nav-link active" href="index.html">Home</a>
                     <a class="nav-link" href="#">Works</a>
                     <a class="nav-link" href="#">About</a>
@@ -41,5 +41,24 @@
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        
+            <script>
+            $(document).scroll(function() {
+                var getScr = $(document).scrollTop();
+                if (getScr >= 620)
+                {
+                    $('#header').css('background','#ffffff');
+                    $('#header').css('color','#000000');
+                    $('.nav-link').css('color','#000000');
+                    $('.nav-link:hover').css('border-bottom','5px solid #000000');
+                }
+                else {
+                    $('#header').css('background','#000000');
+                    $('#header').css('color','#ffffff');
+                    $('.nav-link').css('color','#ffffff');
+                }
+            })
+            </script>
+
     </body>
 </html>
