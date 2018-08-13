@@ -11,7 +11,6 @@ html, body{
     color: #ffffff;
     position: fixed;
     background: #000000;
-    padding-top:10px;
     transition: all 1s ease-in-out;
 }
 .parallax { 
@@ -34,6 +33,7 @@ html, body{
     height: 1240px;
 }
 .nav-link{
+    height: 100%;
      font-size: 18px;
      -o-transition:.5s;
      -ms-transition:.5s;
@@ -46,9 +46,11 @@ html, body{
     border: none;
     outline: none;
 }
-.nav-link:hover{
-   
-    border-bottom: 4px solid white;
+.white:hover{
+    border-bottom: 4px solid #ffffff;
+}
+.black:hover{
+    border-bottom: 4px solid #000000;
 }
 .logo{
     font-family: 'Poiret One';

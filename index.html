@@ -17,13 +17,12 @@
         <header class="container-fluid" id="header">
             <div class="row">
                 <div class="logo col-lg-4 offset-lg-2">
-                    <img src="images/logo_white.png" height = "50px">
-                    <span>STUDIO</span>
+                    <span>1783STUDIO</span>
                 </div>
                 <nav class="nav justify-content-end col-lg-4">
-                    <a class="nav-link active" href="index.html">Home</a>
-                    <a class="nav-link" href="#">Works</a>
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link white active" href="index.html">Home</a>
+                    <a class="nav-link white" href="#">Works</a>
+                    <a class="nav-link white" href="#">About</a>
                 </nav>
             </div>
         </header>
@@ -50,12 +49,15 @@
                     $('#header').css('background','#ffffff');
                     $('#header').css('color','#000000');
                     $('.nav-link').css('color','#000000');
-                    $('.nav-link:hover').css('border-bottom','5px solid #000000');
+                    $('.white').addClass('black');
+                    $('.black').removeClass('white');
                 }
                 else {
                     $('#header').css('background','#000000');
                     $('#header').css('color','#ffffff');
                     $('.nav-link').css('color','#ffffff');
+                    $('.black').addClass('white');
+                    $('.white').removeClass('black');
                 }
             })
             </script>
