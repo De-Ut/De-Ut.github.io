@@ -48,3 +48,13 @@ h1{
 .card-header{
     padding: 0.1rem 1rem;
 }
+
+#filtr .nav-link{
+    color: #aaaaaa;
+    text-decoration: underline dashed #aaaaaa;
+    transition: all 0.5s ease-in-out;
+}
+#filtr .active{
+    color: #000000;
+    text-decoration: underline dashed #000000;
+}

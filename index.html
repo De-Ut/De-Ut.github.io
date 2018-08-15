@@ -29,23 +29,28 @@
         <section id="home" class="container-fluid h-100">
             <div class="row h-100 justify-content-center align-items-center"></div>
         </section>
-        <section id="works" class="container-fluid h-100 pt-5">
+        <section id="works" class="container-fluid pt-5 pb-5">
             <div class="container justify-content-center">
                 <h1>Our Works</h1>
-                
-                <div class="row">
-                    <div class="col-lg-4">
+                <div id="filtr" class="nav justify-content-center mb-3">
+                    <a class="nav-link" data-tag="html" href="javascript:void(0)">html/css</a>
+                    <a class="nav-link" data-tag="js" href="javascript:void(0)">javascript</a>
+                    <a class="nav-link" data-tag="cs" href="javascript:void(0)">c#</a>
+                    <a class="nav-link" data-tag="art" href="javascript:void(0)">arts</a>
+                </div>
+                <div id="all-cards" class="row justify-content-center">
+                    <div class="cardwrapper html col-lg-4">
                         <div class="card shadow mb-4">
-                            <h6 class="card-header">Card title</h6>
+                            <h6 class="card-header">Landing Page</h6>
                             <img class="card-img-bottom" src="images/1.jpg" alt="Card image cap">
                             <div class="card-body">
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <span class="card-link">22.02.12</span>
-                                <a href="#" class="card-link">Autor</a>
+                                <p class="card-text">One interessing landing page. I... I don't know what about i'm talking.</p>
+                                <span class="card-link">16.08.2018</span>
+                                <a href="#" class="card-link">mr.aleks756</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="cardwrapper js col-lg-4">
                         <div class="card shadow mb-4">
                             <h6 class="card-header">Site</h6>
                             <img class="card-img-bottom" src="images/2.jpg" alt="Card image cap">
@@ -56,7 +61,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="cardwrapper art col-lg-4">
                         <div class="card shadow mb-4">
                             <h6 class="card-header">Site</h6>
                             <img class="card-img-bottom" src="images/3.jpg" alt="Card image cap">
@@ -67,6 +72,15 @@
                             </div>
                         </div>
                     </div>
+                    <div class="cardwrapper cs col-lg-4">
+                            <div class="card shadow mb-4">
+                                <h6 class="card-header">Coming soon...</h6>
+                                <img class="card-img-bottom" src="images/teaser.jpg" alt="Card image cap">
+                                <div class="card-body">
+                                    <p class="card-text">Now we don't have any c# projects. But not for long)</p>
+                                </div>
+                            </div>
+                        </div>
                 </div>
             </div>
         </section>
@@ -75,5 +89,23 @@
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script>            
+            $(function(){
+                var tag = "";
+                $('#filtr a').click(function(){
+                    $('#all-cards').fadeOut(200).delay(100);
+                    $('#filtr a').removeClass('active');
+                    $(this).addClass('active');
+                    tag = $(this).data('tag');
+                    $('.cardwrapper').not('.'+tag).delay(250).hide(0);
+                    $('.'+tag).delay(250).show(0);
+                    $('#all-cards').fadeIn(200);
+                })
+            })
+            
+            $(document).ready(function(){
+                $('#filtr a:first').trigger('click');
+            })
+        </script>
     </body>
 </html>
