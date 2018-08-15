@@ -17,9 +17,6 @@ html, body{
     /* The image used */
     background: #000000;
 
-    /* Set a specific height */
-    height: 620px; 
-
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
