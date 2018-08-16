@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Poiret+One');
-
 *{
     margin: 0;
     padding: 0;
@@ -8,9 +7,11 @@ html, body{
     height: 100%;
     width: 100%;
 }
-header{
+#header{
     color: #ffffff;
     position: fixed;
+    background: #000000;
+    transition: all 1s ease-in-out;
 }
 #home {
     background: url(images/background.png);
@@ -57,4 +58,29 @@ h1{
 #filtr .active{
     color: #000000;
     text-decoration: underline dashed #000000;
+    height: 1240px;
+}
+.nav-link{
+    height: 100%;
+     font-size: 18px;
+     -o-transition:.5s;
+     -ms-transition:.5s;
+     -moz-transition:.5s;
+     -webkit-transition:.5s;
+     transition:.5s;
+     color: #ffffff;
+    }
+.nav-link:focus{
+    border: none;
+    outline: none;
+}
+.white:hover{
+    border-bottom: 4px solid #ffffff;
+}
+.black:hover{
+    border-bottom: 4px solid #000000;
+}
+.logo{
+    font-family: 'Poiret One';
+    font-size: 34px;
 }
