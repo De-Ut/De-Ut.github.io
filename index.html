@@ -12,6 +12,8 @@
         <!-- My Commit -->
         <link rel="stylesheet" href="style.css">
         <title>Hello, world!</title>
+
+        
     </head>
     <body>
         <header class="container-fluid" id="header">
@@ -20,13 +22,13 @@
                     <span>1783STUDIO</span>
                 </div>
                 <nav class="nav justify-content-end col-lg-4">
-                    <a class="nav-link white active" href="index.html">Home</a>
-                    <a class="nav-link white" href="#">Works</a>
+                    <a class="nav-link white active" href="#home">Home</a>
+                    <a class="nav-link white" href="#works">Works</a>
                     <a class="nav-link white" href="#">About</a>
                 </nav>
             </div>
         </header>
-        <section class="parallax container-fluid h-100">
+        <section class="parallax container-fluid h-100" id = "home">
             <div class="row h-100 justify-content-center align-items-center">
                 <div class="point-light"></div>
                 <img src="images/logo_white.png">
@@ -43,8 +45,8 @@
         
             <script>
             window.onscroll = function() {
-                var getScr = $(document).scrollTop();
-                var Height = $(document).clientHeight();
+                var getScr = document.documentElement.scrollTop;
+                var Height = document.documentElement.clientHeight;
                 if (getScr >= Height)
                 {
                     $('#header').css('background','#ffffff');
@@ -61,7 +63,19 @@
                     $('.white').removeClass('black');
                 }
             }
+
             </script>
+
+<script>
+        $(document).ready(function () {
+    $("a").click(function () {
+    var elementClick = $(this).attr("href");
+    var destination = $(elementClick).offset().top;
+        $('html').animate({ scrollTop: destination }, 1100);
+    return false; 
+});
+});
+    </script>
 
     </body>
 </html>
