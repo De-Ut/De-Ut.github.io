@@ -13,7 +13,7 @@ html, body{
     color: #ffffff;
     position: fixed;
     background: #000000;
-    transition: all 1s ease-in-out;
+    transition: all 0.5s;
 }
 #home {
     background: url(images/background.png);
@@ -73,7 +73,7 @@ html, body{
         -ms-transition:.5s;
         -moz-transition:.5s;
         -webkit-transition:.5s;
-        transition:.5s;
+        transition: all 0.5s;
         color: #ffffff;
         }
 

@@ -104,16 +104,10 @@
                     $('#all-cards').fadeIn(200);
                 })
             })
-            
-            $(document).ready(function(){
-                $('#filtr a:first').trigger('click');
-            })
-        </script>
-        
-            <script>
+
             window.onscroll = function() {
-                var getScr = document.documentElement.scrollTop;
-                var Height = document.documentElement.clientHeight;
+                var getScr = $(document).scrollTop();
+                var Height = $('#home').height() - $('#header').height();
                 if (getScr >= Height)
                 {
                     $('#header').css('background','#ffffff');
@@ -131,17 +125,15 @@
                 }
             }
 
-            </script>
-
-<script>
-        $(document).ready(function () {
-    $("a").click(function () {
-    var elementClick = $(this).attr("href");
-    var destination = $(elementClick).offset().top;
-        $('html').animate({ scrollTop: destination }, 1100);
-    return false; 
-});
-});
+            $(document).ready(function () {
+                $('#filtr a:first').trigger('click');
+                $("a").click(function () {
+                var elementClick = $(this).attr("href");
+                var destination = $(elementClick).offset().top;
+                $('html').animate({ scrollTop: destination }, 1000);
+                return false; 
+                });
+            });
     </script>
 
     </body>
