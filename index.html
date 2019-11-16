@@ -1,12 +1,58 @@
-<html>
-  <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
-    <script src="sketch.js"></script>
-    <script src="snake.js"></script>
-    <script src="food.js"></script>
-    <style>#defaultCanvas0{display:block; margin:auto;}</style>
-  </head>
-  <body>
-    
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> 
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="img/logo.png">
+      <h1>детектор<br>собственника</h1>
+    </div>
+    <img class="nav-button" src="img/list.png" width="100px" onclick="openMenu()">
+  </header>
+  <nav id="menu">
+    <ul>
+      <li class="span">
+        <h1>Главное меню</h1>
+        <img class="nav-button" src="img/list.png" width="100px" onclick="openMenu()">
+      </li>
+      <li class="span">Для полноценного использования сайта войдите под своим логином и паролем или зарекистрируйтесь</li>
+      <li><a href="#1">Войти в систему</a></li>
+      <li class="span">Администрация проекта</li>
+      <li><a href="#2">Задать вопрос</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>За 20 секунд получите<br>квартиры от собственников<br>с 8 досок объявлений</h1>
+    <div class="images">
+      <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
+      <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
+      <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
+      <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
+    </div>
+    <div class="images">
+      <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
+      <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
+      <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
+      <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
+    </div>
+    <h2>Тратите меньше времени,<br>заселяетесь пока квартира свободна</h2>
+    <iframe class="yt" width="560" height="315" src="https://www.youtube.com/embed/z_HWtzUHm6s?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p>Найдите кодовое слово в 2х минутном видео,<br>чтобы получить бесплатный доступ на час</p>
+    <button class="trial">Попробовать бесплатно на час</button>
+  </main>
+  <script>
+    function openMenu(){
+      menu = document.getElementById("menu")
+      if(menu.style.left == "0%"){
+        menu.style.left = "-100%";
+      }else{
+        menu.style.left = "0%";
+      }
+    }
+  </script>
+</body>
 </html>
