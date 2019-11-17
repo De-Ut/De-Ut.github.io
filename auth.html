@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> 
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+      <img src="img/logo.png">
+      <h1>детектор<br>собственника</h1>
+      </a>
+    </div>
+    <img class="nav-button" src="img/list.png" width="100px" onclick="openMenu()">
+  </header>
+  <nav id="menu">
+    <ul>
+      <li class="span">
+        <h1>Главное меню</h1>
+        <img class="nav-button" src="img/list.png" width="100px" onclick="openMenu()">
+      </li>
+      <li class="span">Для полноценного использования сайта войдите под своим логином и паролем или зарекистрируйтесь</li>
+      <li><a href="auth.html">Войти в систему</a></li>
+      <li class="span">Администрация проекта</li>
+      <li><a href="#2">Задать вопрос</a></li>
+    </ul>
+  </nav>
+  <main>
+    <h1>Авторизация</h1>
+    <span>Для входа в систему введите, пожалуйста, ваш телефон и пароль</span>
+    <hr>
+    <form class="auth" method="POST">
+      <input type="tel" name="phone" placeholder="+7 (000) 000-00-00" oninput="correct(this.value)">
+      <input type="password" placeholder="введите ваш пароль">
+      <input type="submit">
+    </form>
+    <p>Нажмите <a href="registration.html">зарегистрироваться</a>, если вы впервые на Детекторе собственника и хотите получить доступ, к самой полной и быстрой базе собственников.</p>
+    <p>Нажмите <a href="recovery.html">восстановить пароль</a>, если у вас уже есть аккаунт, но вы потеряли пароль</p>
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+  <script>
+    function openMenu(){
+      menu = document.getElementById("menu")
+      if(menu.style.left == "0%"){
+        menu.style.left = "-100%";
+      }else{
+        menu.style.left = "0%";
+      }
+    }
+    $(function($) {
+      $('input[name="phone"]').mask("+7 (999) 999-99-99");
+    });
+    </script>
+  </script>
+</body>
+</html>

@@ -14,7 +14,7 @@ html{
 body{
   height: 100%;
   color: #ffffff;
-  background-image: url("img/light-green-vector-background-with-dots-lines_6869-1443.jpg");
+  background-image: url("../img/light-green-vector-background-with-dots-lines_6869-1443.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -26,7 +26,7 @@ body{
     padding: 25px;
     height: 200px;
     vertical-align: middle;
-    margin-bottom: 8em;
+    margin-bottom: 150px;
   }
   .logo{
     position: relative;
@@ -52,6 +52,10 @@ body{
     float: right;
     margin: 25px 25px 0 0;
   }
+  header a{
+    text-decoration: none;
+    color: #ffffff;
+  }
 /* HEADER */
 
 
@@ -64,11 +68,8 @@ nav{
   transition: left 1s ease;
   height: 100%;
   width: 100%;
-  background-image: url("img/light-green-vector-background-with-dots-lines_6869-1443.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  font-size: 2em;
+  background: #004b1e;
+  font-size: 32px;
 }
 nav li{
   display: block;
@@ -80,6 +81,10 @@ nav li{
 nav li.span{
   background: #004b1e;
   font-style: italic;
+  color: #cccccc;
+}
+nav li.span:first-child{
+  color: #ffffff;
 }
 nav li:first-child{
   background-image: linear-gradient(#016B2B, #000000);
@@ -102,7 +107,7 @@ nav a{
   display: block;
   text-decoration: none;
   color: #ffffff;
-  font-size: 1.5em;
+  font-size: 48px;
   font-weight: 400;
 }
 /* NAV */
@@ -110,38 +115,43 @@ nav a{
 
 /* MAIN */
 main{
-  font-size: 0.8em;
-  font-weight: 200;
+  font-weight: 300;
   padding: 0 50px;
   text-align: center;
 }
 main h1{
-  font-size: 3em;
-  size: 50px;
+  font-size: 40px;
   font-weight: 500;
-  margin: 2em 0;
 }
 main h2{
-  font-weight: 200;
-  font-size: 1.5em;
-  margin: 3em 0;
+  font-size: 16px;
+  font-weight: 300;
 }
-.images{
+main h5{
+  font-size: 16px;
+  font-weight: 300;
+}
+main .image-row{
   max-height: 200px;
 }
-.images img{
+main .images{
+  margin: 50px 0;
+}
+main .images img{
   max-width: 20%;
 }
-.yt{
-  margin: 1em 0;
+main .yt{
+  margin: 150px 0 50px 0;
 }
-.trial{
+main .trial{
   background: #fffb3e;
   color: #000000;
-  font-size: 2em;
-  padding: 1em 2em;
-  margin: 1em;
+  font-size: 32px;
+  width: 600px;
+  height: 100px;
+  margin: 50px;
   border: none;
   border-radius: 5px;
 }
+
 /* MAIN */

@@ -2,14 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"> 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>Document</title>
 </head>
 <body>
   <header>
     <div class="logo">
+      <a href="index.html">
       <img src="img/logo.png">
       <h1>детектор<br>собственника</h1>
+      </a>
     </div>
     <img class="nav-button" src="img/list.png" width="100px" onclick="openMenu()">
   </header>
@@ -20,28 +22,30 @@
         <img class="nav-button" src="img/list.png" width="100px" onclick="openMenu()">
       </li>
       <li class="span">Для полноценного использования сайта войдите под своим логином и паролем или зарекистрируйтесь</li>
-      <li><a href="#1">Войти в систему</a></li>
+      <li><a href="auth.html">Войти в систему</a></li>
       <li class="span">Администрация проекта</li>
       <li><a href="#2">Задать вопрос</a></li>
     </ul>
   </nav>
-  <main>
+  <main class="content">
     <h1>За 20 секунд получите<br>квартиры от собственников<br>с 8 досок объявлений</h1>
     <div class="images">
-      <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
-      <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
-      <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
-      <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
-    </div>
-    <div class="images">
-      <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
-      <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
-      <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
-      <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
+      <div class="image-row">
+        <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
+        <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
+        <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
+        <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
+      </div>
+      <div class="image-row">
+        <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
+        <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
+        <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
+        <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
+      </div>
     </div>
     <h2>Тратите меньше времени,<br>заселяетесь пока квартира свободна</h2>
     <iframe class="yt" width="560" height="315" src="https://www.youtube.com/embed/z_HWtzUHm6s?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <p>Найдите кодовое слово в 2х минутном видео,<br>чтобы получить бесплатный доступ на час</p>
+    <h5>Найдите кодовое слово в 2х минутном видео,<br>чтобы получить бесплатный доступ на час</h3>
     <button class="trial">Попробовать бесплатно на час</button>
   </main>
   <script>
