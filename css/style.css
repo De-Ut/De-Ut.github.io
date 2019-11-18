@@ -60,7 +60,7 @@ body{
 
 
 /* NAV */
-nav{
+#menu, #fltr{
   position: fixed;
   top: 0;
   left: -100%;
@@ -71,26 +71,24 @@ nav{
   background: #004b1e;
   font-size: 32px;
 }
-nav li{
+#menu li{
   display: block;
   background: #016B2B;
   border-bottom: 2px solid #000000;
   padding: 10px 30px;
   font-weight: 200;
 }
-nav li.span{
-  background: #004b1e;
-  font-style: italic;
-  color: #cccccc;
-}
-nav li.span:first-child{
-  color: #ffffff;
-}
-nav li:first-child{
+.head{
   background-image: linear-gradient(#016B2B, #000000);
   padding: 25px;
   width: 100%;
   height: 200px;
+  color: #ffffff;
+}
+#menu li.span{
+  background: #004b1e;
+  font-style: italic;
+  color: #cccccc;
 }
 nav h1{
   margin-top: 35px;
@@ -109,6 +107,54 @@ nav a{
   color: #ffffff;
   font-size: 48px;
   font-weight: 400;
+}
+
+#fltr table{
+  margin: calc(50vh - (400px + 495px) / 2) auto;
+}
+#fltr td:first-child{
+  padding-right: 10px;
+  text-align: right;
+}
+.rooms div {
+  display: inline-block;
+}
+.rooms label{
+  text-align: center;
+  width: 100%;
+  display: block;
+  width: 100px;
+  font-size: 32px;
+  background: #cccccc;
+  color: #000000;
+  cursor: pointer;
+}
+.rooms input{
+  display: none;
+}
+input:checked + label{
+  background: #aaaaaa;
+}
+#fltr iframe{
+  display: block;
+}
+.price input{
+  font-size: 32px;
+  width: 100px;
+}
+.foot{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+}
+#fltr input[type="submit"]{
+  width: 100%;
+  height: 200px;
+  font-size: 72px;
+  background: #fffb3e;
+  color: #000000;
+  border: none;
 }
 /* NAV */
 

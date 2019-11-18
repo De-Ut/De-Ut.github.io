@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> 
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="index.html">
+      <img src="img/logo.png">
+      <h1>детектор<br>собственника</h1>
+      </a>
+    </div>
+    <img class="nav-button" src="img/list.png" width="100px" onclick="openMenu('menu')">
+  </header>
+  <nav id="menu">
+    <div class="head">
+      <h1>Главное меню</h1>
+      <img class="nav-button" src="img/list.png" width="100px" onclick="openMenu('menu')">
+    </div>
+    <ul>
+      <li class="span">Для полноценного использования сайта войдите под своим логином и паролем или зарекистрируйтесь</li>
+      <li><a href="auth.html">Войти в систему</a></li>
+      <li class="span">Администрация проекта</li>
+      <li><a href="#2">Задать вопрос</a></li>
+    </ul>
+  </nav>
+  <nav id="fltr">
+    <div class="head">
+      <h1>Фильтр</h1>
+      <img class="nav-button" src="img/list.png" width="100px" onclick="openMenu('fltr')">
+    </div>
+    <form id="fltr-frm">
+      <table>
+      <tr>
+        <td><span>Количество комнат</span></td>
+        <td>
+          <div class="rooms">
+            <div>
+              <input type="radio" id="radio0" name="rooms" value="0" checked>
+              <label for="radio0">???</label>
+            </div>
+            <div>
+              <input type="radio" id="radio1" name="rooms" value="1">
+              <label for="radio1">1к</label>
+            </div>
+            <div>
+              <input type="radio" id="radio2" name="rooms" value="2">
+              <label for="radio2">2к</label>
+            </div>
+            <div>
+              <input type="radio" id="radio3" name="rooms" value="3">
+              <label for="radio3">3к</label>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td><span>Область на карте</span></td>
+        <td><iframe src="https://yandex.ru/map-widget/v1/-/CGXAAB8U" width="560" height="400" frameborder="1" allowfullscreen="true"></iframe></td>
+      </tr>
+      <tr>
+        <td><span>Цена</span></td>
+        <td>
+          <div class="price">
+            <input type="number" name="price-low" placeholder="от">
+            <input type="number" name="price-high" placeholder="до">
+          </div>
+        </td>
+      </tr>
+    </table>
+    </form>
+  <div class="foot">
+    <input type="submit" form="fltr-frm">
+  </div>
+  </nav>
+  <main class="content">
+    <button onclick="openMenu('fltr')">FILTER</button>
+  </main>
+  <script>
+    function openMenu(id){
+      menu = document.getElementById(id)
+      if(menu.style.left == "0%"){
+        menu.style.left = "-100%";
+      }else{
+        menu.style.left = "0%";
+      }
+    }
+  </script>
+</body>
+</html>
