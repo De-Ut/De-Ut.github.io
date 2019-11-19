@@ -14,12 +14,12 @@
       <h1>детектор<br>собственника</h1>
       </a>
     </div>
-    <img class="nav-button" src="img/list.png" width="100px" onclick="openMenu()">
+    <img class="nav-button" src="img/list.png" width="100px" onclick="openMenu('menu')">
   </header>
   <nav id="menu">
     <div class="head">
       <h1>Главное меню</h1>
-      <img class="nav-button" src="img/list.png" width="100px" onclick="openMenu()">
+      <img class="nav-button" src="img/list.png" width="100px" onclick="openMenu('menu')">
     </div>
     <ul>
       <li class="span">Для полноценного использования сайта войдите под своим логином и паролем или зарекистрируйтесь</li>
@@ -35,7 +35,8 @@
     <form class="auth" method="POST">
       <input type="tel" name="phone" placeholder="+7 (000) 000-00-00" oninput="correct(this.value)">
       <input type="password" placeholder="введите ваш пароль">
-      <input type="submit">
+      <input type="submit" value="Войти">
+      <la
     </form>
     <p>Нажмите <a href="registration.html">зарегистрироваться</a>, если вы впервые на Детекторе собственника и хотите получить доступ, к самой полной и быстрой базе собственников.</p>
     <p>Нажмите <a href="recovery.html">восстановить пароль</a>, если у вас уже есть аккаунт, но вы потеряли пароль</p>

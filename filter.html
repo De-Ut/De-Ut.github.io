@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8"> 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/article.css">
   <title>Document</title>
 </head>
 <body>
@@ -78,6 +79,32 @@
   </nav>
   <main class="content">
     <button onclick="openMenu('fltr')">FILTER</button>
+    <div id="articles-list">
+      <article class="article">
+        <div class="article-image">
+          <img src="img/logo.png">
+        </div>
+        <div class="article-body">
+          <div class="title">
+            <div class="cat"></div>
+            <div class="type"></div>
+            <div class="rooms"></div>
+          </div>
+          <div class="description">
+            <div class="price"></span></div>
+            <div class="area"></div>
+            <div class="floor"></div>
+          </div>
+          <div>
+            <div class="position"></div>
+          </div>
+        </div>
+        <div class="article-spec">
+          <div class="date"></div>
+          <button>-</button>
+        </div>
+      </article>
+    </div>
   </main>
   <script>
     function openMenu(id){
@@ -87,6 +114,42 @@
       }else{
         menu.style.left = "0%";
       }
+    }
+    window.onload = () => {
+      let data = getData();
+      var currentLocation = window.location.hash;
+      for (let i = 0; i < data.length; i++) {
+        let list = document.getElementById("articles-list");
+        let article = list.firstElementChild.cloneNode(true);
+        article.getElementsByClassName('cat')[0].append(document.createTextNode('Сдам'));
+        article.getElementsByClassName('type')[0].append(document.createTextNode("Кв."));
+        article.getElementsByClassName('rooms')[0].append(document.createTextNode(data[i].rooms + "-комн."));
+        article.getElementsByClassName('price')[0].append(document.createTextNode(data[i].cost + " т.р."));
+        let cubom = document.createElement('sup');
+        cubom.append(document.createTextNode('2'));
+        article.getElementsByClassName('area')[0].append(document.createTextNode(data[i].sq + " м"), cubom);
+        article.getElementsByClassName('floor')[0].append(document.createTextNode(data[i].floor + "/" + data[i].floors));
+        article.getElementsByClassName('position')[0].append(document.createTextNode(data[i].address));
+        article.getElementsByClassName('date')[0].append(document.createTextNode("Сегодня"));
+        article.style.display = "block";
+        list.appendChild(article);
+      }
+      alert(currentLocation)
+    }
+    function getData(){
+      let data = [];
+      for (let i = 0; i < 10; i++){
+        var info = {
+          rooms : 3,
+          cost : 1750,
+          sq : 32,
+          floor : 5,
+          floors : 6,
+          addres : "Островского, 6"
+        }
+        data[i] = info;
+      }
+      return data;
     }
   </script>
 </body>
