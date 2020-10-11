@@ -1,62 +1,19 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"> 
-  <link rel="stylesheet" href="css/style.css">
-  <title>Document</title>
-</head>
-<body>
-  <header>
-    <div class="logo">
-      <a href="index.html">
-      <img src="img/logo.png">
-      <h1>детектор<br>собственника</h1>
-      </a>
-    </div>
-    <img class="nav-button" src="img/list.png" width="100px" onclick="openMenu('menu')">
-  </header>
-  <nav id="menu">
-    <ul>
-      <li class="span">
-        <h1>Главное меню</h1>
-        <img class="nav-button" src="img/list.png" width="100px" onclick="openMenu('menu')">
-      </li>
-      <li class="span">Для полноценного использования сайта войдите под своим логином и паролем или зарекистрируйтесь</li>
-      <li><a href="auth.html">Войти в систему</a></li>
-      <li class="span">Администрация проекта</li>
-      <li><a href="#2">Задать вопрос</a></li>
-    </ul>
-  </nav>
-  <main class="content">
-    <h1>За 20 секунд получите<br>квартиры от собственников<br>с 8 досок объявлений</h1>
-    <div class="images">
-      <div class="image-row">
-        <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
-        <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
-        <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
-        <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
-      </div>
-      <div class="image-row">
-        <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
-        <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
-        <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
-        <img src="http://giphygifs.s3.amazonaws.com/media/6b9QApjUesyOs/giphy.gif">
-      </div>
-    </div>
-    <h2>Тратите меньше времени,<br>заселяетесь пока квартира свободна</h2>
-    <iframe class="yt" width="560" height="315" src="https://www.youtube.com/embed/z_HWtzUHm6s?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <h5>Найдите кодовое слово в 2х минутном видео,<br>чтобы получить бесплатный доступ на час</h3>
-    <button class="trial">Попробовать бесплатно на час</button>
-  </main>
-  <script>
-    function openMenu(id){
-      menu = document.getElementById(id)
-      if(menu.style.left == "0%"){
-        menu.style.left = "-100%";
-      }else{
-        menu.style.left = "0%";
-      }
-    }
-  </script>
-</body>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <!-- My commit -->
+        <link rel="stylesheet" href="style.css">
+        <title>1783studio</title>
+    </head>
+    <body>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
 </html>
