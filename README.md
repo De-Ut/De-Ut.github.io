@@ -1,2 +1,2 @@
-# 1783studio.github.io
-HTML-page for my works
+# de-ut.github.io
+1783studio project
